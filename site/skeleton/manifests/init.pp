@@ -1,6 +1,6 @@
 class skeleton{
   file { '/etc/skel':
-    ensure= 'folder',
+    ensure=> 'directory',
   }
   file { '/etc/skel/.bashrc':
     ensure  => 'file',
