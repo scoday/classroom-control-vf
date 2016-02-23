@@ -4,7 +4,7 @@ class skeleton{
   }
   file { '/etc/skel/.bashrc':
     ensure  => 'file',
-    source  =>  'puppet:///modules/skeleton/.bashrc',
+    source  =>  'puppet:///modules/skeleton/bashrc',
     #content => '{md5}2f8222b4f275c4f18e69c34f66d2631b',
     #ctime   => '2016-02-22 15:10:24 +0000',
     group   => '0',
