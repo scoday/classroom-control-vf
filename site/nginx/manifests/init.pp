@@ -2,7 +2,6 @@ class nginx {
 
    package { 'nginx':
      ensure => present,
-     before => File['/etc/sysconfig/memcached.conf'],
    }
 
    file { '/etc/nginx/nginx.conf':
