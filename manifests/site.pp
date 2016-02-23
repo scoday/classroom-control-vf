@@ -61,5 +61,6 @@ node default {
 #  target => '/etc/hosts',
 #}
 #}
+  include skeleton
   include users
 }
