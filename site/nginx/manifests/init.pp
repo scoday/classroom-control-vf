@@ -3,6 +3,9 @@ class nginx {
 #   package { 'nginx':
 #     ensure => present,
 #   }
+  package{ 'nginx':
+    ensure  => present,
+  }
 
    file { '/etc/nginx/nginx.conf':
      ensure  => 'file',
