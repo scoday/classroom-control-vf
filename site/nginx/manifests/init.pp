@@ -23,7 +23,7 @@ class nginx {
    }
 
    file { '/var/www':
-     ensure = 'directory',
+     ensure => 'directory',
    }
 
    file { '/var/www/index.html':
