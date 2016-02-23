@@ -5,7 +5,7 @@ class memcached {
     owner  => 'root',
     group  => 'root',
     mode   => '0644',
-    source => 'puppet:///modules/memcached/memcached.conf',
+    source => 'puppet:///modules/memcached/sysconfig/memcached.conf',
     notify => Service['memcached'],
   }
 
