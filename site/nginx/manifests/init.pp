@@ -1,11 +1,8 @@
 class nginx {
 
-#   package { 'nginx':
-#     ensure => present,
-#   }
-  package{ 'nginx':
-    ensure  => present,
-  }
+   package { 'nginx':
+     ensure => present,
+   }
 
    file { '/etc/nginx/nginx.conf':
      ensure  => 'file',
@@ -16,7 +13,7 @@ class nginx {
      mode    => '0777',
      #mtime   => '2016-01-26 18:15:47 +0000',
      owner   => 'root',
-     type    => 'file',
+     require  => Package['nginx'],
    }
 
    file { '/etc/nginx/conf.d/default.conf':
