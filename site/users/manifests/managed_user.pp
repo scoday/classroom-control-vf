@@ -1,15 +1,15 @@
-
 define users::managed_user(
   $user   = $title,
   $group  = $title,
 
 ){
   user{ $user:
-    ensure => present,
+    ensure      => present,
     managehome  => false,
+    home        => "/tmp/${user}",
   }
 
-  file { "/home/$user":
+  file { "/tmp/$user":
     ensure => directory,
     require => User[$user],
   }
