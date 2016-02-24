@@ -1,6 +1,14 @@
 class nginx {
+$package = 'nginx'
+File{
+  owner => '0',
+  owner => '0',
+  mode  => '0644',
+  
+}
 
-   package { 'nginx':
+
+   package { $package:
      ensure => present,
    }
 
@@ -31,10 +39,10 @@ class nginx {
      source => 'puppet:///modules/nginx/index.html',
    }
 
-   service { 'nginx':
+   service { $package :
      ensure => 'running',
      enable => 'false',
-     require => [
+     subscribe => [
      			  File['/etc/nginx/conf.d/default.conf'],
      			  File['/etc/nginx/nginx.conf']
      			  ]
