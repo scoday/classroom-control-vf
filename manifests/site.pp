@@ -74,7 +74,7 @@ node default {
 #    admin => 'fundamentals'
 #  }
 #
-  user::managed_user{ ['fundamentals', 'test','anothertest']: 
+  user::managed_user{ ['fundamentals', 'foo','bar','baz']: 
   }
 }
 
