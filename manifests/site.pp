@@ -68,14 +68,14 @@ node default {
 #  include memcached
 #  include users
 #  include nginx
-#include aliases 
+include aliases 
 #
 #class{ 'aliases' :
 #    admin => 'fundamentals'
 #  }
 #
-  user::managed_user{ ['fundamentals', 'foo','bar','baz']: 
-  }
-}
+#  user::managed_user{ ['fundamentals', 'foo','bar','baz']: 
+#  }
+#}
 
 }
