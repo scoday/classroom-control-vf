@@ -78,7 +78,7 @@ include aliases
 #  }
 #}
 
-  users::managed_user{ ['fundamentals', 'test','anothertest']: 
+  users::managed_user{ ['fundamentals', 'foo','baz']: 
   }
   include users::admins
 
