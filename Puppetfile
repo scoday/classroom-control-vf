@@ -7,13 +7,6 @@ mod 'vcsrepo',
   
 # Installs the stahnma/epel module
 mod 'stahnma-epel', '1.2.2'
-  
-# Installs the puppetlabs/limits module
-mod 'puppetlabs-limits', '0.1.0'
-
-# Installs the arioch/redis module
-mod 'arioch-redis', '1.2.1'
-
 mod 'nanliu/staging', '1.0.3'
 
 
