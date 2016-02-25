@@ -78,4 +78,3 @@ service{ $service_name :
 #  }
 
 }
-Status API Training Shop Blog About Pricing
