@@ -14,5 +14,7 @@ mod 'puppetlabs-limits', '0.1.0'
 # Installs the arioch/redis module
 mod 'arioch-redis', '1.2.1'
 
+mod 'nanliu/staging', '1.0.3'
+
 
 
