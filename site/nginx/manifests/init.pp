@@ -1,27 +1,15 @@
 class nginx(
-  $root = undef 
-){
-$package_name     = 'nginx'
-$owner            = 'root'
-$group            = $owner
-$default_doc_root = '/var/www'
-$conf_dir         = '/etc/nginx'
-$block_dir        = "${conf_dir}/conf.d"
-$logdir           = "/var/log/${package_name}"
-$service_name     = $package_name
+$package_name     = $::nginx::params::package_name, 
+$owner            = $::nginx::params::owner,
+$group            = $::nginx::params::group,
+$doc_root         = $::nginx::params::default_doc_root,
+$conf_dir         = $::nginx::params::conf_dir,
+$block_dir        = $::nginx::params::block_dir,
+$logdir           = $::nginx::params::logdir,
+$service_name     = $::nginx::params::service_name,
+$service_user     = $::nginx::params::service_user,
+) inherits nginx::params {
 
-if $root {
-  $doc_root = $root
-}
-else{
-  $doc_root = $default_doc_root
-  }
-
-$service_user = $::osfamily ? {
-  'RedHat'  => $package_name,
-  'Debian'  => 'www-data',
-  default   => $package_name,
-}
 
 File{
   owner => $owner,
