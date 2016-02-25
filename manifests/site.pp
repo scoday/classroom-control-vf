@@ -67,8 +67,8 @@ node default {
 #  include skeleton
 #  include memcached
 #  include users
-#  include nginx
-# include aliases 
+  include nginx
+#  include aliases 
 #
 #class{ 'aliases' :
 #    admin => 'fundamentals'
@@ -78,8 +78,8 @@ node default {
 #  }
 #}
 #
-  users::managed_user{ ['fundamentals', 'test','anothertest']: 
-  }
-  include users::admins
-}
+#  users::managed_user{ ['fundamentals', 'test','anothertest']: 
+#  }
+#  include users::admins
+#}
 
