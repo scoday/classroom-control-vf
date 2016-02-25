@@ -45,6 +45,9 @@ node default {
   
   $cvirtual=capitalize($::virtual)
   notify { "Hello, my name is ${::hostname} and I am a Virtual ${cvirtual}  and release 13.2": }
+  $the_message = hiera('message')
+  notify { $the_message :
+  } 
   
 #file { '/etc/motd':
 #  ensure  => file,
