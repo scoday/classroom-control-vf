@@ -72,7 +72,7 @@ node default {
 #  include users
 #  include nginx
 #  include aliases 
-include wrapper
+include wrappers::mystaging
 #class{ 'aliases' :
 #    admin => 'fundamentals'
 #  }
