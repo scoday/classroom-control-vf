@@ -1,5 +1,5 @@
 class users::admins{
-  $admins = ['admin','administrator','wheel']
+  $admins = ['admin','administrator','scoday','wheel']
 
   users::managed_user{  $admins : 
     }
